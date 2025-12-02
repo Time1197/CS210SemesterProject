@@ -10,7 +10,7 @@ public class PlayerCharacter extends Character {
     }
 
     @Override
-    public void preformTurn(BattleManager manager) {
+    public void performTurn(BattleManager manager) {
         //this will probably be in javaFX?
         //signals that the logic is ready for UI to enable buttons
         System.out.println("[Logic] Waiting for player input");

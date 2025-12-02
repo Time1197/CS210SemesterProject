@@ -32,7 +32,7 @@ public abstract class Character {
 
     //Abstract: children must define how they will act
     //requires the battle manager class.
-    public abstract void preformTurn(BattleManager manager);
+    public abstract void performTurn(BattleManager manager);
 
     //--- COMBAT ---
     //take damage

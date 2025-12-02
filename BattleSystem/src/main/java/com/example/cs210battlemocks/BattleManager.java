@@ -70,11 +70,11 @@ public class BattleManager {
         if (currentCharacter instanceof PlayerCharacter) {
             currentState = BattleState.PLAYER_TURN;
             System.out.println(">>> It is " + currentCharacter.getName() + "'s turn!");
-            currentCharacter.preformTurn(this);
+            currentCharacter.performTurn(this);
         } else {
             //if it's an enemy character...
             currentState = BattleState.ENEMY_TURN;
-            currentCharacter.preformTurn(this);
+            currentCharacter.performTurn(this);
             //in UI, we may want to add a delay.
             nextTurn();
         }
@@ -101,4 +101,7 @@ public class BattleManager {
 
     public BattleState getBattleState() {return currentState;}
 
+    public List<PlayerCharacter> getPlayers() {
+        return players;
+    }
 }

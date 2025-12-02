@@ -11,10 +11,10 @@ public class Enemy extends Character {
     }
 
     @Override
-    public void preformTurn(BattleManager manager) {
+    public void performTurn(BattleManager manager) {
         System.out.println(this.name + " is thinking...");
         //AI decides
-        aiBrain.decideAction(this, manager.getBattleState());
+        aiBrain.decideAction(this, manager);
     }
 
 }
