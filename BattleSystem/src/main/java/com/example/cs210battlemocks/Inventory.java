@@ -3,6 +3,8 @@ package com.example.cs210battlemocks;
 import java.util.HashMap;
 import java.util.Map;
 
+//Inventory for both heros and villains. Mainly heros to keep track of items and potions.
+//later on, this would be used for determining if an enemy drops any special loot.
 public class Inventory {
     //Maps an Item to the quantity  owed.
     private Map<Item, Integer> items;
