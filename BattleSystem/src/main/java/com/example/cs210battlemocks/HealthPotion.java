@@ -6,7 +6,7 @@ public class HealthPotion extends Item{
 
     public HealthPotion() {
         super("Health Potion", "Restores 500 HP");
-        this.healAmount = 500;
+        this.healAmount = 50;
     }
 
     @Override

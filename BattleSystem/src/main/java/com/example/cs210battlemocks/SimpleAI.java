@@ -22,7 +22,7 @@ public class SimpleAI implements AIBrain {
             System.out.println("[AI] " + self.getName() + " decides to ATTACK " + target.getName() + "!");
             //enemy attacks using a basic attack
             //note: this is NOT where the attack is supposed to go. It's just a temporary location
-            Ability basicAttack = new Ability("Basic Attack", "Scratch", 0, 100, null);
+            Ability basicAttack = new Ability("Basic Attack", "Scratch", 0, 10, null);
             basicAttack.execute(self, target);
         } else {
             System.out.println("[AI] " + self.getName() + " has no one to attack!");
