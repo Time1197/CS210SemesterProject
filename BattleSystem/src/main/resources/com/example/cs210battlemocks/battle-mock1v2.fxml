@@ -46,7 +46,7 @@
                   <Insets left="15.0" right="15.0" top="10.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Attack" />
+                  <Button fx:id="AttackButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Attack" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Ability" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Item" />
                   <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Flee" />
