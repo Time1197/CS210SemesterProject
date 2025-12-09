@@ -11,7 +11,7 @@ public class HealthPotion extends Item{
 
     @Override
     public void use(Character target) {
-        target.heal(healAmount);
+        target.heal(healAmount); //heal expects int but gets a double?
         System.out.println("Used Health Potion on " + target.getName() + " for" + healAmount * 100 + " HP.");
     }
 

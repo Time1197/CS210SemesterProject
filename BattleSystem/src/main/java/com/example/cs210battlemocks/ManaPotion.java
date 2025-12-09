@@ -1,6 +1,6 @@
 package com.example.cs210battlemocks;
 
-//mana potion to heal character. extends item
+//mana potion to restore character's mana. extends item
 public class ManaPotion extends Item{
     private double recoverAmount;
 
@@ -11,7 +11,7 @@ public class ManaPotion extends Item{
 
     @Override
     public void use(Character target) {
-        target.heal(recoverAmount);
+        target.gainMana(recoverAmount); //gainMana expects int but gets a double?
         System.out.println("Used Mana Potion on " + target.getName() + " for" + recoverAmount * 100 + " MP.");
     }
 
