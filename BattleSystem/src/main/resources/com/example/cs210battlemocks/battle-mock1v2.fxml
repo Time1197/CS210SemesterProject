@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:controller="com.example.praticeproject.Battle1v2Controller"
+<BorderPane fx:controller="com.example.cs210battlemocks.Battle1v2Controller"
             prefWidth="800" prefHeight="600"
             xmlns="http://javafx.com/javafx/25"
             xmlns:fx="http://javafx.com/fxml/1">
