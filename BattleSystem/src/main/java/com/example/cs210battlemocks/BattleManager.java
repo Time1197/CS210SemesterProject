@@ -41,6 +41,14 @@ public class BattleManager {
         turnOrder.addAll(combatants);
     }
 
+    public boolean hasStatusEffect(Class<? extends StatusEffect> type) {
+        for (StatusEffect effect : activeEffects) {
+            if (type.isInstance(effect)) {
+                return true;
+            }
+        }
+        return false;
+
     public void nextTurn() {
         //1. Check win/loss conditions
         if (checkBattleOver()) return;
@@ -65,7 +73,14 @@ public class BattleManager {
             return;
         }
 
-        //5. Determine State based on who is acting
+        // 5. If the character is frozen, they skip their turn
+        if (currentCharacter.hasStatusEffect(FrozenEffect.class)) {
+            System.out.println(currentCharacter.getName() + " is frozen and skips their turn!");
+            nextTurn();
+            return;
+            }
+
+        //6. Determine State based on who is acting
         //if it's a player character
         if (currentCharacter instanceof PlayerCharacter) {
             currentState = BattleState.PLAYER_TURN;
