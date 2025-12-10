@@ -12,7 +12,7 @@ public class ManaPotion extends Item{
     @Override
     public void use(Character target) {
         target.gainMana(recoverAmount);
-        System.out.println("Used Mana Potion on " + target.getName() + " for" + recoverAmount + " MP.");
+        System.out.println("Used Mana Potion on " + target.getName() + " for " + recoverAmount + " MP.");
     }
 
 }
