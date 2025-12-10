@@ -5,7 +5,7 @@ public class HealthPotion extends Item{
     private int healAmount;
 
     public HealthPotion() {
-        super("Health Potion", "Restores 500 HP");
+        super("Health Potion", "Restores 50 HP");
         this.healAmount = 50;
     }
 

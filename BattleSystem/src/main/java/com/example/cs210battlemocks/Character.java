@@ -67,6 +67,16 @@ public abstract class Character {
         effect.onApply(this);
     }
 
+    //check for a status effect on a character
+    public boolean hasStatusEffect(Class<? extends StatusEffect> type) {
+        for (StatusEffect effect : activeEffects) {
+            if (type.isInstance(effect)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     //go through the status effects on this character and tick them.
     public void updateStatusEffects() {
         Iterator<StatusEffect> iterator = activeEffects.iterator();
