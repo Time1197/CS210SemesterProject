@@ -41,14 +41,6 @@ public class BattleManager {
         turnOrder.addAll(combatants);
     }
 
-    public boolean hasStatusEffect(Class<? extends StatusEffect> type) {
-        for (StatusEffect effect : activeEffects) {
-            if (type.isInstance(effect)) {
-                return true;
-            }
-        }
-        return false;
-
     public void nextTurn() {
         //1. Check win/loss conditions
         if (checkBattleOver()) return;
