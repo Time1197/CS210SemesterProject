@@ -2,17 +2,17 @@ package com.example.cs210battlemocks;
 
 //health potion to heal character. extends item
 public class HealthPotion extends Item{
-    private double healAmount;
+    private int healAmount;
 
     public HealthPotion() {
         super("Health Potion", "Restores 50 HP");
-        this.healAmount = 0.5;
+        this.healAmount = 50;
     }
 
     @Override
     public void use(Character target) {
-        target.heal(healAmount); //heal expects int but gets a double?
-        System.out.println("Used Health Potion on " + target.getName() + " for" + healAmount * 100 + " HP.");
+        target.heal(healAmount);
+        System.out.println("Used Health Potion on " + target.getName() + " for" + healAmount + " HP.");
     }
 
 }
