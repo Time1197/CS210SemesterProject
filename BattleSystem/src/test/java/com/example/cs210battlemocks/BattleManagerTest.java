@@ -10,6 +10,7 @@ import java.util.List;
 
 //test case: when a playerCharacter attacks an enemy with an ability, the enemy will take the
 //specific amount of damage and return if the damage and math logic was correct or not.
+//this JUnit test file is authored by Keenan DePaz.
 
 class BattleManagerTest {
 
@@ -17,7 +18,7 @@ class BattleManagerTest {
     private Enemy slime;
     private BattleManager manager;
 
-    // This runs before EVERY single @Test method to reset the state
+    //this runs before EVERY single @Test method to reset the state
     @BeforeEach
     void setUp() {
         //set up our hero and our enemy
@@ -25,7 +26,7 @@ class BattleManagerTest {
         Stats slimeStats = new Stats(10, 2, 5, 0); // Spd 5
 
         hero = new PlayerCharacter("Test Hero", 100, 50, heroStats);
-        // We use SimpleAI since we know it works
+        //we use SimpleAI since we know it works
         slime = new Enemy("Test Slime", 50, 0, slimeStats, new SimpleAI());
 
         //add them to the list to prepare for battle
@@ -40,8 +41,8 @@ class BattleManagerTest {
 
     @Test
     void testDamageCalculation() {
-        // Setup a fireball: 20 Power
-        // Dmg = Power(20) + Mag(5) - Def(2) = 23
+        //setup a fireball: 20 Power
+        //dmg = Power(20) + Mag(5) - Def(2) = 23
         Ability fireball = new Ability("Fireball", "Fire", 10, 20, null);
 
         int initialHP = slime.getCurrentHP();
